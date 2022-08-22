@@ -5,6 +5,8 @@
     while (index < lenght)
     {
         collection[index] = new Random().Next(1, 10);
+        Console.Write(collection[index]);
+        Console.Write(" ");
         index++;
     }
 }
@@ -30,17 +32,13 @@ int indexOf(int[] collection, int find)
         if (collection[index] == find)
         {
             position = index;
-            break;
+            Console.WriteLine(position);
         }
         index++;
-
     }
     return position;
 }
 
 int[] array = new int[10];
 FillArray(array);
-PrintArray(array);
-Console.WriteLine();
-int pos = indexOf(array, 4);
-Console.Write(pos);
+indexOf(array, 5);
