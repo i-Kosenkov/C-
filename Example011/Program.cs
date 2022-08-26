@@ -1,40 +1,27 @@
-﻿Console.Write("Введите Х: ");
+﻿Console.Write("Введите номер четверти 1-4: ");
 bool isNumberX = int.TryParse(Console.ReadLine(), out int x);
 
-Console.Write("Введите Y: ");
-bool isNumberY = int.TryParse(Console.ReadLine(), out int y);
+// if (isNumberX != true || isNumberY != true)
+// {
+//     Console.WriteLine("Числа введены не верно");
+//     return;
+// }
 
-if (isNumberX != true || isNumberY != true)
-{
-    Console.WriteLine("Числа введены не верно");
-    return;
-}
-
-int result = GetPosition(x, y);
+string result = GetPosition(x);
 Console.WriteLine(result);
 
-int GetPosition(int x, int y)
+string GetPosition(int x)
 {
-    if (x > 0 && y > 0)
+    switch(x)
     {
-        return 1;
+case 1:
+return "x>0 y>0";
+case 2:
+return "x<0 y>0";
+case 3:
+return "x<0 y<0";
+case 4:
+return "x>0 y<0";
+default "Введено не верное значение";
     }
-
-    if (x < 0 && y > 0)
-    {
-        return 2;
-
-    }
-
-    if (x < 0 && y < 0)
-    {
-        return 3;
-
-    }
-    if (x > 0 && y < 0)
-    {
-        return 4;
-
-    }
-    return -1;
 }
