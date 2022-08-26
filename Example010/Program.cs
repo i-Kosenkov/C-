@@ -61,11 +61,4 @@ bool CheckDel(int x, int y)
     }
 }
 bool z = CheckDel(x, y);
-if (z == true)
-{
-    Console.Write($"Число {y} является квадратом {x}");
-}
-else
-{
-    Console.Write($"Число {y} не является квадратом {x}");
-}
+Console.Write(z);
