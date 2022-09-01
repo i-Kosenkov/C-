@@ -1,11 +1,11 @@
-﻿// Console.Write("Введите число: ");
-// bool isNum_x = int.TryParse(Console.ReadLine(), out int x);
+﻿Console.Write("Введите число: ");
+bool isNum_x = int.TryParse(Console.ReadLine(), out int x);
 
-// if (!isNum_x)
-// {
-//     Console.WriteLine("Ошибка ввода");
-//     return;
-// }
+if (!isNum_x)
+{
+    Console.WriteLine("Ошибка ввода");
+    return;
+}
 
 //Cумма от 1 до Х
 int GetSum(int number)
@@ -44,11 +44,12 @@ int GetProizv(int number)
 //Задача 30 - массив [8] заполенный 0 и 1
 int[] RandomZeroOne(int[] array)
 {
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = new Random().Next(0,2);
-}
-return array;
+    Random randomNumber = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = randomNumber.Next(0, 2);
+    }
+    return array;
 }
 
 //Вывод данных из массива
@@ -60,11 +61,14 @@ void PrintArray(int[] array)
     }
 }
 
-//Console.Write(GetSum(x));
-//int result = CountNumber(x);
-//int result = GetProizv(x);
+Console.Write($"Задача 26 (количество цифр в числе): {CountNumber(x)}");
 
-// int [] massive = new int[8];
-// int [] result = RandomZeroOne(massive);
-// PrintArray(result);
+Console.WriteLine();
 
+Console.Write($"Задача 28 (произведение от 1 до Х): {GetProizv(x)}");
+
+Console.WriteLine();
+
+int[] result = RandomZeroOne(new int[x]);
+Console.Write($"Задача 30 (массив с 0 и 1): ");
+PrintArray(result);
