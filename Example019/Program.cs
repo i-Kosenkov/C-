@@ -13,25 +13,7 @@ int [] array = GetArray(x);
 Console.Write("Введите искомое значение: ");
 bool isNum_y = int.TryParse(Console.ReadLine(), out int y);
 
-Console.WriteLine(GetNumberTrueFalse(array,y));
-
-bool GetNumberTrueFalse(int[] array, int a)
-{
-for (int i = 0; i < array.Length; i++)
-{
-    if (array[i] == a) return true;
-}
-    return false;
-}
-
-//Вывод данных из массива
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
-}
+Console.WriteLine(Contains(array,y));
 
 //Заполняем массив
 int[] GetArray(int lenght)
@@ -43,4 +25,17 @@ int[] GetArray(int lenght)
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
+}
+
+//Ищем число в массиве
+bool Contains(int[] array, int a)
+{
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] == a) 
+    {
+        return true;
+    }
+}
+    return false;
 }
