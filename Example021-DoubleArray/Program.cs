@@ -20,6 +20,7 @@ void GetRandomDoubleArray(int [,] array)
         }
 }
 }
+
 Console.Write("Введите количество строк: ");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
