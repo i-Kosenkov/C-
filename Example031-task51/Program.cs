@@ -46,4 +46,3 @@ PrintArray(array);
 int sum = GetSumDiagonalNumbers(array);
 Console.WriteLine();
 Console.Write($"Сумма диагонали = {sum}");
-
