@@ -41,4 +41,3 @@ PrintArray(array);
 GetIndex(array);
 Console.WriteLine();
 PrintArray(array);
-

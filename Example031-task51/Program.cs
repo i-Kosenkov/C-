@@ -23,7 +23,7 @@ void PrintArray(int[,] array)
     }
 }
 
-//Находим четные индексы
+//Находим сумму элементов диагонали
 int GetSumDiagonalNumbers(int[,] array)
 {
     int result = 0;
