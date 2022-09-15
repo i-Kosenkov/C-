@@ -19,7 +19,7 @@ int GetDegreeNumber(int a, int b)
     {
         sum = sum * a;
         i++;
-        Console.WriteLine(sum);
+        //Console.WriteLine(sum);
         GetDegreeNumber(a, b);
     }
     return sum;
